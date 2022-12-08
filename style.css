@@ -9,11 +9,15 @@
      --text-black-700:#555555;
      --text-black-600:#666666;
      --text-black-300:#bbbbbb;
+     --outer-shadow:3px 3px 3px #d0d0d0,-3px -3px 3px #f8f8f8;
+     --outer-shadow-0:0 0 0 #d0d0d0,0 0 0 #f8f8f8;
+     --inner-shadow:inset 3px 3px 3px #d0d0d0,inset -3px -3px 3px #f8f8f8;
 }
 body {
   font-size: 16px;
   line-height: 1.5;
   overflow-x: hidden;
+  background-color:var(--bg-black-50);
 }
 *:not(i)
 {
@@ -55,6 +59,30 @@ img{
 .justify-content-between{
      justify-content:space-between
 }
+
+.outer-shadow{
+     box-shadow: var(--outer-shadow);
+}
+
+.hover-in-shadow{
+     position: relative;
+     z-index: 1;
+}
+.hover-in-shadow:hover{
+     box-shadow: var(--outer-shadow-0);
+}
+.hover-in-shadow::after{
+     content: ' ';
+     position:absolute;
+     left: 0;
+     top:0;
+     width:100%;
+     height:100%;
+     transition: all 0.3s ease;
+}
+.hover-in-shadow:hover::after{
+     box-shadow: var(--inner-shadow);
+}
 /*header*/
 .header {
   /* background-color: grey; */
@@ -64,6 +92,7 @@ img{
   top:0;
   left: 0;
   z-index:99;
+  /* background-color: red; */
 }
 .header .logo a{
      display: inline-block;
@@ -86,9 +115,14 @@ img{
      /* box-shadow: 0 0 10px; */
      display: flex;
      align-items:center;
+     cursor: pointer;
+     border-radius:  50%;
      justify-content: center;
+     transition: all 0.3s ease;
 }
-
+/* .header .hamburger-btn::after{
+     border-radius: 50%;/*if you dont wtn to maek border 50% after hover ing commment this
+} */
 .header .hamburger-btn span{
      display:block;
      height:2px;
