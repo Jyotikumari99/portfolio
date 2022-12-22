@@ -532,7 +532,7 @@ img {
   max-width: 100%;
   display: none;
 }
-.about-section .tab-content .active{
+.about-section .tab-content.active{/*.active ke phle no  gap otherwise it iwll not be visible*/
    display: block;
 }
 .about-section .skills {
