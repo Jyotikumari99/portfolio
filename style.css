@@ -199,6 +199,16 @@ img {
     transform: translateX(25px);
   }
 }
+@keyframes fadeInTop{
+  0%{
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(-25px);
+  }
+}
 .section-title {
   /* background-color: #ff0707; */
   padding: 0 15px;
@@ -534,6 +544,7 @@ img {
 }
 .about-section .tab-content.active{/*.active ke phle no  gap otherwise it iwll not be visible*/
    display: block;
+   animation: fadeInTop 0.5s ease;;
 }
 .about-section .skills {
   padding: 0 0 40px;
