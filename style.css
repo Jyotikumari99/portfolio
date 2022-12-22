@@ -572,3 +572,14 @@ img {
    color: var(--text-black-600);
    margin-top: -40px;
 }
+.about-section .experience{
+  padding-bottom: 80px;
+}
+.about-section .timeline{
+  /* background-color: #ff0707; */
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.about-section .timeline .timeline-item{
+  /* background-color: red;34.05 */
+}
